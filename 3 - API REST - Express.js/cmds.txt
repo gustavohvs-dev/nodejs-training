@@ -1,0 +1,8 @@
+npm init
+npm install -g nodemon
+npm install express --save
+npm install body-parser --save
+npm install cors --save
+npm install jsonwebtoken --save
+
+npx nodemon index.js

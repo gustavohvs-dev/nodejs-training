@@ -1,0 +1,11 @@
+npm init
+npm install -g nodemon
+npm install express --save
+npm install body-parser --save
+npm install cors --save
+npm install jsonwebtoken --save
+npm install knex --save
+npm install bcrypt --save
+npm install mysql2 --save
+
+npx nodemon index.js

@@ -1,0 +1,17 @@
+CREATE TABLE users(
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(150) NOT NULL,
+        email VARCHAR(150) NOT NULL UNIQUE,
+        password VARCHAR(200) NOT NULL,
+        role INT(11),
+        createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP()
+    );
+
+CREATE TABLE passwordtokens(
+        id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        token VARCHAR(200) NOT NULL,
+        user_id INT(10) NOT NULL,
+        user BOOLEAN NOT NULL,
+        createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+        FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE
+    );
